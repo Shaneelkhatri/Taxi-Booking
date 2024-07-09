@@ -1,0 +1,47 @@
+$create_table = "Create Table $bookingform(
+            bookingreference VARCHAR(35) NOT NULL PRIMARY KEY,
+            cname VARCHAR(50) NOT NULL,
+            phone VARCHAR(12) NOT NULL,
+            unumber VARCHAR(255),
+            snumber VARCHAR(255) NOT NULL,
+            stname VARCHAR(255) NOT NULL,
+            sbname VARCHAR(255), 
+            dsbname VARCHAR(255),
+            pick_up_date DATE NOT NULL DEFAULT CURRENT_DATE,
+            pick_up_time TIME NOT NULL DEFAULT CURRENT_TIME,
+            status VARCHAR(50) DEFAULT 'unassigned')";
+       mysqli_query($connection, $create_table)
+       or die();
+    }
+ $query = "INSERT INTO $bookingform VALUES(
+        '$bookingreference',
+        '$cname',
+        '$phone',
+        '$unumber',
+        '$snumber',
+        '$stname',
+        '$sbname',
+        '$dsbname',
+        '$pick_up_date',
+        '$pick_up_time',
+        '$status'
+        )";
+
+
+
+
+$query = "INSERT INTO bookingform (booking_ref, cname, phone, unumber, snumber, stname, sbname, dsbname, pick_date, pick_time) 
+          VALUES ('$booking_ref', '$cname', '$phone', '$unumber', '$snumber', '$stname', '$sbname', '$dsbname', '$date', '$time')";
+
+$query = "SELECT * FROM bookingform WHERE bookingreference = '$searchValue'";
+$query = "SELECT * FROM bookingform WHERE pick_date = CURDATE() AND pick_time BETWEEN CURTIME() AND ADDTIME(CURTIME(), '02:00')"
+
+
+
+
+
+$query = "SELECT * FROM bookingform WHERE bookingreference = '$bsearch'";
+$query = "SELECT * FROM bookingform WHERE status='unassigned' AND pick_up_time BETWEEN NOW() AND DATE_ADD(NOW(), INTERVAL 2 HOUR)";
+$sql = "UPDATE bookingform SET status = 'assigned' WHERE bookingreference = '$bsearch'";
+$query = "SELECT * FROM bookingform Order By bookingreference DESC";
+

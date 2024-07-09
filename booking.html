@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taxi Booking</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="booking.js" defer></script>
+  </head>
+  <body>
+    <h1>Taxi Booking</h1>
+    
+    <nav>
+      <a href="booking.html">Make A Booking</a>
+      <a href="admin.html">Search Booking</a>
+    </nav>
+
+    <div class="form-container">
+    <form id="bookingform">
+      <label for="cname">Customer Name:</label>
+      <input type="text" id="cname" name="cname" required /><br />
+
+      <label for="phone">Phone Number:</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        required
+        pattern="[0-9]{10,12}"
+      /><br />
+
+      <label for="unumber">Unit Number:</label>
+      <input type="text" id="unumber" name="unumber" /><br />
+
+      <label for="snumber">Street Number:</label>
+      <input type="text" id="snumber" name="snumber" required /><br />
+
+      <label for="stname">Street Name:</label>
+      <input type="text" id="stname" name="stname" required /><br />
+
+      <label for="sbname">Suburb:</label>
+      <input type="text" id="sbname" name="sbname" /><br />
+
+      <label for="dsbname">Destination Suburb:</label>
+      <input type="text" id="dsbname" name="dsbname" /><br />
+
+      <label for="pick_up_date">Pick-Up Date:</label>
+      <input type="date" id="pick_up_date" name="pick_up_date" required /><br />
+
+      <label for="pick_up_time">Pick-Up Time:</label>
+      <input type="time" id="pick_up_time" name="pick_up_time" required /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+    <div id="message"></div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+
+
+body {
+    background-color: #a2ecdc; /* Replace #333 with your desired color code */
+    background-image: linear-gradient(270deg, #94e6e1 0%, #c77d99 100%);
+  }
+  
+  
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #037dc4; /* Replace #333 with your desired color code */
+    background-image: linear-gradient(270deg, #037dc4 0%, #74bbb3 100%);
+    padding: 10px 15px;
+    border-radius: 5px;
+    gap: 15px;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* This will make the container element take up the full height of the viewport */
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 25px;
+    
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #777;
+  }
+  
+  li {
+    list-style-type:circle;
+    
+  }
+  
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  
+  h1{
+      text-align: center;
+      margin: 20px auto;
+      width: fit-content;
+  }
+
+  td.center-right {
+    text-align: right;
+    width: 50%;
+    vertical-align: middle;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }

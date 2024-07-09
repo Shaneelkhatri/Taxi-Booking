@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      td,
+      th {
+        width: 200px;
+        border: 1px solid gray;
+        text-align: center;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      .hidden{
+        display:none;
+      }
+    </style>
+    <script src="./jquery-3.7.1.min.js"></script>
+
+    <script src="admin.js" defer></script>
+<link rel="stylesheet" href="style.css">
+    <title>Admin</title>
+  </head>
+  <body>
+
+<h1>Booking Search</h1>
+
+    <nav>
+      <a href="booking.html">Make A Booking</a>
+      <a href="admin.html">Search Booking</a>
+    </nav>
+
+    <div class="form-container">
+    <form id="searchForm">
+      <input
+        type="text"
+        name="bsearch"
+        id="bookingreference"
+        placeholder="Enter Booking Reference Number"
+      />
+      <input
+        type="button"
+        name="sbutton"
+        value="Search"
+        onclick="searchBooking()"
+      />
+    </form>
+    </div>
+    <div class="content" id="bookinginfo">
+      <div id="view_error" class="hidden">No booking found</div>
+      <table id="view_table" class="hidden">
+        <thead>
+          <tr>
+            <th>Booking Reference Number</th>
+            <th>Customer Name</th>
+            <th>Phone</th>
+            <th>Pickup Suburb</th>
+            <th>Destination Suburb</th>
+            <th>Pickup Date and Time</th>
+            <th>Status</th>
+            <th>Assign</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
